@@ -7,12 +7,16 @@ import catIcon from '../../assets/images/icons/cat.webp';
 import abcIcon from '../../assets/images/icons/abc.png';
 import readIcon from '../../assets/images/icons/reading.png';
 import NavigationBar from '../../components/NavigationBar';
+import { useRouter } from 'expo-router';
 
 const Index = () => {
+
+  const router = useRouter();
+
   return (
     <Center flex={1} bg="#071120" w={'100%'}>
       <VStack space={6} alignItems="center" w={'100%'} >
-        <TouchableOpacity style={{ width: '80%' }}>
+        <TouchableOpacity style={{ width: '80%' }} onPress={() => router.replace('/screens/AlphabeticalMenu')}>
           <HStack space={4} alignItems="center" justifyItems='center' justifyContent='center' bg="#4CA0FF" px={8} py={4} borderRadius={20} w={'100%'}>
             <Image
               source={dogIcon}
@@ -39,8 +43,8 @@ const Index = () => {
         </TouchableOpacity>
       </VStack>
 
-      <NavigationBar prev={'/'} next={'/screens/AlphabeticalMenu'} />
-    </Center>
+      <NavigationBar prev={'/'} next={''} reload={false} />
+    </Center >
   );
 };
 
