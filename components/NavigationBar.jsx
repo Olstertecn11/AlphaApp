@@ -15,7 +15,7 @@ const NavigationBar = ({ prev, next, reload = true }) => {
 
 
   return (
-    <HStack space={4} position="absolute" bottom={10} alignItems="center">
+    <HStack space={4} position={'relative'} mt={'10%'} alignItems="center" p={2} w={'100%'} px={'8%'} py={'4%'}>
 
       <TouchableOpacity onPress={() => router.replace(prev)}>
         <Box bg="#F44336" size={16} borderRadius="full" />
@@ -35,6 +35,8 @@ const NavigationBar = ({ prev, next, reload = true }) => {
         </TouchableOpacity> : ''
       }
       <Image
+        position={'absolute'}
+        right={10}
         source={soundIcon}
         alt="Sound Icon"
         style={{ width: 50, height: 50, marginLeft: 54 }}
