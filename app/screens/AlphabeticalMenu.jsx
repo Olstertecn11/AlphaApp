@@ -5,7 +5,8 @@ import { TouchableOpacity } from 'react-native';
 import NavigationBar from '../../components/NavigationBar';
 import { Colors } from '../../constants/Colors';
 import HeaderBar from '../../components/HeaderBar';
-import { createTable } from '../../services/database';
+import { useRouter } from 'expo-router';
+// import { createTable } from '../../services/database';
 
 const MenuRow = ({ items }) => {
   return (
@@ -22,10 +23,11 @@ const MenuItem = ({ letter }) => {
   const vocals = ['A', 'E', 'I', 'O', 'U'];
   if (!letter) return <Box size={16} />;
 
+  const router = useRouter();
   const isVocal = vocals.includes(letter);
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => router.push(`/screens/Letters/${letter}`)}>
       <Box bg={isVocal ? Colors.buttonImportant : Colors.buttonInactive} size={16} borderRadius={14} justifyContent="center" alignItems="center">
         <Text color="white">{letter}</Text>
       </Box>
@@ -34,6 +36,8 @@ const MenuItem = ({ letter }) => {
 };
 
 const AlphabeticalMenu = () => {
+
+
   const AlphabetGrid = [
     ['A', 'B', 'C'],
     ['D', 'E', 'F'],
@@ -47,8 +51,8 @@ const AlphabeticalMenu = () => {
   ];
 
   React.useEffect(() => {
-    const result = createTable();
-    console.log(result);
+    // const result = createTable();
+    // console.log(result);
   }, []);
 
 

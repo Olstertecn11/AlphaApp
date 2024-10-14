@@ -4,7 +4,7 @@ import { Colors } from '../constants/Colors'
 
 
 
-const HeaderBar = () => {
+const HeaderBar = ({ icon }) => {
 
   return (
 
@@ -12,7 +12,7 @@ const HeaderBar = () => {
       <Box bg={Colors.buttonActive} height={4} width="70%" borderRadius={10} my={2} position='absolute' top={4} left={-5} />
       <Box bg="#294E6E" height={4} width="50%" borderRadius={10} mb={6} top={'30.5%'} left={-5} position='absolute' />
       <Image
-        source={abcIcon}
+        source={icon ?? abcIcon}
         position={'absolute'}
         top={'10%'}
         left={'74%'}

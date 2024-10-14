@@ -3,7 +3,7 @@ import * as SQLite from 'expo-sqlite';
 
 
 
-const db = SQLite.openDatabase('db.db');
+const db = await SQLite.openDatabaseAsync('db.db');
 
 
 export const createTable = () => {
