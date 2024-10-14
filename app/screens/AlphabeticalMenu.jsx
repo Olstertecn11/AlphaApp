@@ -5,6 +5,7 @@ import { TouchableOpacity } from 'react-native';
 import NavigationBar from '../../components/NavigationBar';
 import { Colors } from '../../constants/Colors';
 import HeaderBar from '../../components/HeaderBar';
+import { createTable } from '../../services/database';
 
 const MenuRow = ({ items }) => {
   return (
@@ -44,6 +45,13 @@ const AlphabeticalMenu = () => {
     ['V', 'W', 'X'],
     ['Y', 'Z', ''],
   ];
+
+  React.useEffect(() => {
+    const result = createTable();
+    console.log(result);
+  }, []);
+
+
 
 
   return (
