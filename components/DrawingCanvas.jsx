@@ -3,23 +3,28 @@ import { Canvas, Fill, Mask, Morphology, Path, Skia } from "@shopify/react-nativ
 import { Gesture, GestureDetector, GestureHandlerRootView } from "react-native-gesture-handler";
 import { useSharedValue } from "react-native-reanimated";
 import { Dimensions } from "react-native";
+import letters_path from '../assets/data/letter_paths.json'; // Importa el JSON de rutas
 
 const { width, height } = Dimensions.get("window");
 
-const DrawingCanvas = () => {
-  const letterPath = Skia.Path.MakeFromSVGString(
-    "m15.1 716.4 129-605.04 71.8 0 129 605.04-62.6 0-38.3-197.52-128 0-38.3 197.52-62.6 0zm217.3-257.88-52.4-285.96-52.7 285.96 105.1 0z"
-  );
+const DrawingCanvas = ({ letter = 'A' }) => {
+  const svgPath = letters_path[letter.toUpperCase()];
 
-  const scale = 0.5; // Cambia el valor para ajustar el tamaño (0.5 es la mitad del tamaño original)
+  if (!svgPath) {
+    console.error(`La letra ${letter} no tiene una ruta SVG en el archivo JSON`);
+    return null;
+  }
 
-  const translateX = width / 2 - (width * scale) / 2;
-  const translateY = height / 2 - (height * scale) / 1;
+  const letterPath = Skia.Path.MakeFromSVGString(svgPath);
+
+  const scale = 0.3; // Ajustar este valor para cambiar el tamaño de la letra
+  const translateX = (width - (width * scale)) / 2.8;
+  const translateY = (height - (height * scale)) / 1.3;
 
   letterPath.transform([
-    scale, 0, translateX,    // Primera fila
-    0, scale, translateY + 80,    // Segunda fila
-    0, 0, 1                  // Tercera fila (sin rotación)
+    scale, 0, translateX,   // Primera fila: Escalado y traslación en X
+    0, -scale, translateY,   // Segunda fila: Escalado y traslación en Y
+    0, 0, 1                 // Tercera fila: No hay rotación ni perspectiva
   ]);
 
   const drawPath = useSharedValue(Skia.Path.Make());
