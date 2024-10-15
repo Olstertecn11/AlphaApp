@@ -5,6 +5,7 @@ import NavigationBar from '../../../components/NavigationBar';
 import { Colors } from '../../../constants/Colors';
 import HeaderBar from '../../../components/HeaderBar';
 import { useRouter, useLocalSearchParams } from 'expo-router';
+import DrawingCanvas from '../../../components/DrawingCanvas';
 
 
 
@@ -13,14 +14,15 @@ const LetterScreen = () => {
 
   const { Letter } = useLocalSearchParams();
 
+  // <Text color={Colors.buttonInactive} fontWeight='bold' fontSize='240px' textAlign='center'>{Letter}</Text>
   console.log(Letter);
   return (
     <Center>
       <HeaderBar />
-      <ScrollView mt={'40%'} w={'100%'} pt={'10%'}>
-        <Text color={Colors.buttonInactive} fontWeight='bold' fontSize='240px' textAlign='center'>{Letter}</Text>
-      </ScrollView>
-      <NavigationBar prev={'/screens/AlphabeticalMenu'} next={''} reload={false} />
+      <Box mt={8} w='100%' h='500px' >
+        <DrawingCanvas letter={Letter} />
+      </Box>
+      <NavigationBar prev={'/screens/AlphabeticalMenu'} next={''} />
     </Center>
   )
 }
