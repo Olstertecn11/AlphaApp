@@ -30,7 +30,7 @@ const NavigationBar = ({ prev, next, reload = true }) => {
 
       {next && next.length > 0 ?
 
-        <TouchableOpacity onPress={() => router.replace(next)}>
+        <TouchableOpacity onPress={() => router.push(next)}>
           <Box bg="#4CAF50" size={16} borderRadius="full" />
         </TouchableOpacity> : ''
       }

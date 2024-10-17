@@ -1,0 +1,204 @@
+{
+  "combinations": [
+    {
+      "letter": "B",
+      "syllabic_combination": [
+        "BA",
+        "BE",
+        "BI",
+        "BO",
+        "BU"
+      ]
+    },
+    {
+      "letter": "C",
+      "syllabic_combination": [
+        "CA",
+        "CE",
+        "CI",
+        "CO",
+        "CU"
+      ]
+    },
+    {
+      "letter": "D",
+      "syllabic_combination": [
+        "DA",
+        "DE",
+        "DI",
+        "DO",
+        "DU"
+      ]
+    },
+    {
+      "letter": "F",
+      "syllabic_combination": [
+        "FA",
+        "FE",
+        "FI",
+        "FO",
+        "FU"
+      ]
+    },
+    {
+      "letter": "G",
+      "syllabic_combination": [
+        "GA",
+        "GE",
+        "GI",
+        "GO",
+        "GU"
+      ]
+    },
+    {
+      "letter": "H",
+      "syllabic_combination": [
+        "HA",
+        "HE",
+        "HI",
+        "HO",
+        "HU"
+      ]
+    },
+    {
+      "letter": "J",
+      "syllabic_combination": [
+        "JA",
+        "JE",
+        "JI",
+        "JO",
+        "JU"
+      ]
+    },
+    {
+      "letter": "K",
+      "syllabic_combination": [
+        "KA",
+        "KE",
+        "KI",
+        "KO",
+        "KU"
+      ]
+    },
+    {
+      "letter": "L",
+      "syllabic_combination": [
+        "LA",
+        "LE",
+        "LI",
+        "LO",
+        "LU"
+      ]
+    },
+    {
+      "letter": "N",
+      "syllabic_combination": [
+        "NA",
+        "NE",
+        "NI",
+        "NO",
+        "NU"
+      ]
+    },
+    {
+      "letter": "Ñ",
+      "syllabic_combination": [
+        "ÑA",
+        "ÑE",
+        "ÑI",
+        "ÑO",
+        "ÑU"
+      ]
+    },
+    {
+      "letter": "P",
+      "syllabic_combination": [
+        "PA",
+        "PE",
+        "PI",
+        "PO",
+        "PU"
+      ]
+    },
+    {
+      "letter": "R",
+      "syllabic_combination": [
+        "RA",
+        "RE",
+        "RI",
+        "RO",
+        "RU"
+      ]
+    },
+    {
+      "letter": "S",
+      "syllabic_combination": [
+        "SA",
+        "SE",
+        "SI",
+        "SO",
+        "SU"
+      ]
+    },
+    {
+      "letter": "T",
+      "syllabic_combination": [
+        "TA",
+        "TE",
+        "TI",
+        "TO",
+        "TU"
+      ]
+    },
+    {
+      "letter": "V",
+      "syllabic_combination": [
+        "VA",
+        "VE",
+        "VI",
+        "VO",
+        "VU"
+      ]
+    },
+    {
+      "letter": "W",
+      "syllabic_combination": [
+        "WA",
+        "WE",
+        "WI",
+        "WO",
+        "WU"
+      ]
+    },
+    {
+      "letter": "X",
+      "syllabic_combination": [
+        "XA",
+        "XE",
+        "XI",
+        "XO",
+        "XU"
+      ]
+    },
+    {
+      "letter": "Y",
+      "syllabic_combination": [
+        "YA",
+        "YE",
+        "YI",
+        "YO",
+        "YU"
+      ]
+    },
+    {
+      "letter": "Z",
+      "syllabic_combination": [
+        "ZA",
+        "ZE",
+        "ZI",
+        "ZO",
+        "ZU"
+      ]
+    }
+  ]
+}
