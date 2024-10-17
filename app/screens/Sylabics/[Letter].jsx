@@ -29,7 +29,7 @@ const SyllabicBox = () => {
 
         <SimpleGrid columns={3} spacing={10} mt={0} justifyItems={'center'} justifyContent='center' alignItems='center'  >
           {sylabics.map((item, index) => (
-            <ButtonBox item={item} />
+            <ButtonBox key={index} item={item} index={index} />
           ))}
         </SimpleGrid>
 

@@ -1,0 +1,9 @@
+{
+  "paths": {
+    "BA": "./../audio/letters/sybalics/ba.ogg",
+    "BE": "./../audio/letters/sybalics/be.ogg",
+    "BI": "./../audio/letters/sybalics/bi.ogg",
+    "BO": "./../audio/letters/sybalics/bo.ogg",
+    "BU": "./../audio/letters/sybalics/bu.ogg",
+  }
+}
