@@ -1,17 +1,12 @@
 import { Button, Box, Text } from "native-base";
 import { Colors } from "../constants/Colors";
+import Tts from 'react-native-tts';
 
 const ButtonBox = ({ item }) => {
 
 
   const speak = (text) => {
-    if ('speechSynthesis' in window) {
-      const speech = new SpeechSynthesisUtterance(text);
-      speech.lang = 'es-ES';
-      window.speechSynthesis.speak(speech);
-    } else {
-      alert('Lo siento, tu navegador no soporta Speech Synthesis.');
-    }
+    Tts.speak(text);
   };
 
 
