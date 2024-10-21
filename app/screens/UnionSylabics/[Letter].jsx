@@ -1,7 +1,7 @@
 
 import { Button, HStack, Center, View, Text, Box } from "native-base";
 import React, { useState } from "react";
-import { useLocalSearchParams } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 import consonants from '../../../assets/data/consonantes_ejercicios.json';
 import NavigationBar from "../../../components/NavigationBar";
 import { Colors } from "../../../constants/Colors";
@@ -36,8 +36,7 @@ const AnswerBox = ({ text }) => {
         color={Colors.buttonActive}
         fontSize={20}
         fontWeight="bold"
-        textAlign="center"
-      >
+        textAlign="center">
         {text}
       </Text>
     </Button>
@@ -47,6 +46,7 @@ const AnswerBox = ({ text }) => {
 const UnionSylabic = () => {
   const { Letter } = useLocalSearchParams();
   const upperLetter = Letter.toUpperCase();
+  const router = useRouter();
   const exercises = consonants[upperLetter] || []; // Manejo de caso donde no haya ejercicios
   const [currentExercise, setCurrentExercise] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -56,10 +56,18 @@ const UnionSylabic = () => {
   const sylabics = [...vocals.map(vocal => upperLetter + vocal), ...exercises[currentExercise].silabas];
 
   const nextExercise = () => {
+    if (currentExercise === exercises.length - 1) {
+      router.push(`/screens/LetterPractice/${upperLetter}`);
+      return;
+    }
     if (exercises.length > 0) {
-      setCurrentExercise((prevExercise) =>
-        prevExercise < exercises.length - 1 ? prevExercise + 1 : 0
-      );
+      if (isCorrect) {
+        setAnswers([]);
+        setIsCorrect(false);
+        setCurrentExercise((prevExercise) =>
+          prevExercise < exercises.length - 1 ? prevExercise + 1 : 0
+        );
+      }
     }
   };
 
