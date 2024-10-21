@@ -5,6 +5,8 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import consonants from '../../../assets/data/consonantes_ejercicios.json';
 import NavigationBar from "../../../components/NavigationBar";
 import { Colors } from "../../../constants/Colors";
+import { Confetti } from "react-native-fast-confetti";
+import HeaderBar from '../../../components/HeaderBar';
 
 const ExerciseBox = ({ text, method }) => {
   return (
@@ -47,7 +49,7 @@ const UnionSylabic = () => {
   const { Letter } = useLocalSearchParams();
   const upperLetter = Letter.toUpperCase();
   const router = useRouter();
-  const exercises = consonants[upperLetter] || []; // Manejo de caso donde no haya ejercicios
+  const exercises = consonants[upperLetter] || [];
   const [currentExercise, setCurrentExercise] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -91,7 +93,9 @@ const UnionSylabic = () => {
   }
 
   return (
-    <View flex={1} bg={Colors.background}>
+    <View flex={1} bg={Colors.background} pt={10}>
+      <HeaderBar />
+      {isCorrect && <Confetti autoplay={true} autoStartDelay={0} />}
       <Center mt={5}>
         <HStack space={2} alignItems="center">
           <Text color={Colors.buttonActive} fontSize={140} fontWeight="bold">
