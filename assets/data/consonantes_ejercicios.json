@@ -1,0 +1,301 @@
+{
+    "B": [
+        {
+            "palabra": "BEBE",
+            "silabas": [
+                "BE",
+                "BE"
+            ]
+        },
+        {
+            "palabra": "BOTA",
+            "silabas": [
+                "BO",
+                "TA"
+            ]
+        },
+        {
+            "palabra": "BALA",
+            "silabas": [
+                "BA",
+                "LA"
+            ]
+        }
+    ],
+    "C": [
+        {
+            "palabra": "CAMA",
+            "silabas": [
+                "CA",
+                "MA"
+            ]
+        },
+        {
+            "palabra": "CERA",
+            "silabas": [
+                "CE",
+                "RA"
+            ]
+        },
+        {
+            "palabra": "CIMA",
+            "silabas": [
+                "CI",
+                "MA"
+            ]
+        }
+    ],
+    "D": [
+        {
+            "palabra": "DADO",
+            "silabas": [
+                "DA",
+                "DO"
+            ]
+        },
+        {
+            "palabra": "DAMA",
+            "silabas": [
+                "DA",
+                "MA"
+            ]
+        },
+        {
+            "palabra": "DUDA",
+            "silabas": [
+                "DU",
+                "DA"
+            ]
+        }
+    ],
+    "F": [
+        {
+            "palabra": "FAMA",
+            "silabas": [
+                "FA",
+                "MA"
+            ]
+        },
+        {
+            "palabra": "FUEGO",
+            "silabas": [
+                "FUE",
+                "GO"
+            ]
+        },
+        {
+            "palabra": "FOCO",
+            "silabas": [
+                "FO",
+                "CO"
+            ]
+        }
+    ],
+    "G": [
+        {
+            "palabra": "GOMA",
+            "silabas": [
+                "GO",
+                "MA"
+            ]
+        },
+        {
+            "palabra": "GATO",
+            "silabas": [
+                "GA",
+                "TO"
+            ]
+        },
+        {
+            "palabra": "GUISO",
+            "silabas": [
+                "GUI",
+                "SO"
+            ]
+        }
+    ],
+    "L": [
+        {
+            "palabra": "LAMA",
+            "silabas": [
+                "LA",
+                "MA"
+            ]
+        },
+        {
+            "palabra": "LOBO",
+            "silabas": [
+                "LO",
+                "BO"
+            ]
+        },
+        {
+            "palabra": "LIMA",
+            "silabas": [
+                "LI",
+                "MA"
+            ]
+        }
+    ],
+    "M": [
+        {
+            "palabra": "MAMA",
+            "silabas": [
+                "MA",
+                "MA"
+            ]
+        },
+        {
+            "palabra": "MESA",
+            "silabas": [
+                "ME",
+                "SA"
+            ]
+        },
+        {
+            "palabra": "MIMO",
+            "silabas": [
+                "MI",
+                "MO"
+            ]
+        }
+    ],
+    "N": [
+        {
+            "palabra": "NENE",
+            "silabas": [
+                "NE",
+                "NE"
+            ]
+        },
+        {
+            "palabra": "NIDO",
+            "silabas": [
+                "NI",
+                "DO"
+            ]
+        },
+        {
+            "palabra": "NUBE",
+            "silabas": [
+                "NU",
+                "BE"
+            ]
+        }
+    ],
+    "P": [
+        {
+            "palabra": "PAPA",
+            "silabas": [
+                "PA",
+                "PA"
+            ]
+        },
+        {
+            "palabra": "PELO",
+            "silabas": [
+                "PE",
+                "LO"
+            ]
+        },
+        {
+            "palabra": "PINO",
+            "silabas": [
+                "PI",
+                "NO"
+            ]
+        }
+    ],
+    "R": [
+        {
+            "palabra": "RATA",
+            "silabas": [
+                "RA",
+                "TA"
+            ]
+        },
+        {
+            "palabra": "ROSA",
+            "silabas": [
+                "RO",
+                "SA"
+            ]
+        },
+        {
+            "palabra": "RISA",
+            "silabas": [
+                "RI",
+                "SA"
+            ]
+        }
+    ],
+    "S": [
+        {
+            "palabra": "SOPA",
+            "silabas": [
+                "SO",
+                "PA"
+            ]
+        },
+        {
+            "palabra": "SEMA",
+            "silabas": [
+                "SE",
+                "MA"
+            ]
+        },
+        {
+            "palabra": "SILO",
+            "silabas": [
+                "SI",
+                "LO"
+            ]
+        }
+    ],
+    "T": [
+        {
+            "palabra": "TATA",
+            "silabas": [
+                "TA",
+                "TA"
+            ]
+        },
+        {
+            "palabra": "TEMA",
+            "silabas": [
+                "TE",
+                "MA"
+            ]
+        },
+        {
+            "palabra": "TINA",
+            "silabas": [
+                "TI",
+                "NA"
+            ]
+        }
+    ],
+    "V": [
+        {
+            "palabra": "VACA",
+            "silabas": [
+                "VA",
+                "CA"
+            ]
+        },
+        {
+            "palabra": "VOTO",
+            "silabas": [
+                "VO",
+                "TO"
+            ]
+        },
+        {
+            "palabra": "VIDA",
+            "silabas": [
+                "VI",
+                "DA"
+            ]
+        }
+    ]
+}

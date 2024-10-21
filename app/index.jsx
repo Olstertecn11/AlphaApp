@@ -9,6 +9,10 @@ const InitialScreen = () => {
   const router = useRouter();
 
 
+  React.useEffect(() => {
+
+  }, []);
+
 
   return (
     <Center flex={1} bg="darkBlue.900">

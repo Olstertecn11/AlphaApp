@@ -34,7 +34,7 @@ const SyllabicBox = () => {
         </SimpleGrid>
 
       </Box>
-      <NavigationBar prev={'/screens/AlphabeticalMenu'} next={'/screens/SyllabicMenu'} />
+      <NavigationBar prev={'/screens/AlphabeticalMenu'} next={`/screens/UnionSylabics/${Letter}`} />
     </Center>
   );
 };
