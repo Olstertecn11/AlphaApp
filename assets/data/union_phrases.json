@@ -1,0 +1,210 @@
+{
+  "A": {
+    "phrases": [
+      ["EL", "ÁRBOL", "ALTO"],
+      ["EL", "AVE", "VUELA"],
+      ["AMOR", "ES", "GRANDE"]
+    ],
+    "options": ["ÁRBOL", "ALTO", "AVE", "VUELA", "AMOR", "ES", "GRANDE", "RÍO", "LÁPIZ", "PERRO"]
+  },
+  "B": {
+    "phrases": [
+      ["EL", "BALÓN", "GRANDE"],
+      ["EL", "BEBÉ", "RÍE"],
+      ["EL", "BARCO", "NAVEGA"]
+    ],
+    "options": ["BALÓN", "GRANDE", "BEBÉ", "RÍE", "BARCO", "NAVEGA", "FLOR", "LUNA", "MESA", "TIGRE"]
+  },
+  "C": {
+    "phrases": [
+      ["LA", "CASA", "GRANDE"],
+      ["EL", "CONEJO", "SALTA"],
+      ["EL", "CIELO", "ES", "AZUL"]
+    ],
+    "options": ["CASA", "GRANDE", "CONEJO", "SALTA", "CIELO", "AZUL", "SILLA", "SOL", "IGLESIA", "OSO"]
+  },
+  "D": {
+    "phrases": [
+      ["EL", "DADO", "RODA"],
+      ["EL", "DÍA", "ES", "BRILLANTE"],
+      ["DINERO", "COMPRA", "TODO"]
+    ],
+    "options": ["DADO", "RODA", "DÍA", "BRILLANTE", "DINERO", "COMPRA", "TODO", "HELADO", "FLOR", "PERRO"]
+  },
+  "E": {
+    "phrases": [
+      ["EL", "ELEFANTE", "GRANDE"],
+      ["LA", "ESTRELLA", "BRILLA"],
+      ["EL", "ESPEJO", "REFLEJA"]
+    ],
+    "options": ["ELEFANTE", "GRANDE", "ESTRELLA", "BRILLA", "ESPEJO", "REFLEJA", "NUBE", "UVAS", "YATE", "RATÓN"]
+  },
+  "F": {
+    "phrases": [
+      ["LA", "FLOR", "ES", "BONITA"],
+      ["EL", "FUEGO", "QUEMA"],
+      ["EL", "FARO", "GUÍA"]
+    ],
+    "options": ["FLOR", "BONITA", "FUEGO", "QUEMA", "FARO", "GUÍA", "VELA", "SOL", "TREN", "PASTEL"]
+  },
+  "G": {
+    "phrases": [
+      ["EL", "GATO", "CORRE"],
+      ["EL", "GLOBO", "SUBE"],
+      ["LA", "GRANJA", "TIENE", "ANIMALES"]
+    ],
+    "options": ["GATO", "CORRE", "GLOBO", "SUBE", "GRANJA", "ANIMALES", "PERRO", "OSO", "FLOR", "CASA"]
+  },
+  "H": {
+    "phrases": [
+      ["EL", "HELADO", "ES", "FRÍO"],
+      ["LA", "HORMIGA", "TRABAJA"],
+      ["EL", "HOGAR", "ACOGEDOR"]
+    ],
+    "options": ["HELADO", "FRÍO", "HORMIGA", "TRABAJA", "HOGAR", "ACOGEDOR", "RATÓN", "PASTEL", "UNO", "LUNA"]
+  },
+  "I": {
+    "phrases": [
+      ["LA", "ISLA", "ES", "BONITA"],
+      ["EL", "IMÁN", "ATRAE"],
+      ["LA", "IGLESIA", "ALTA"]
+    ],
+    "options": ["ISLA", "BONITA", "IMÁN", "ATRAE", "IGLESIA", "ALTA", "SILLA", "AVE", "CASA", "ROSA"]
+  },
+  "J": {
+    "phrases": [
+      ["LA", "JIRAFA", "ALTA"],
+      ["EL", "JUEGO", "DIVERTIDO"],
+      ["EL", "JARDÍN", "FLORIDO"]
+    ],
+    "options": ["JIRAFA", "ALTA", "JUEGO", "DIVERTIDO", "JARDÍN", "FLORIDO", "TREN", "CASA", "PERRO", "GATO"]
+  },
+  "K": {
+    "phrases": [
+      ["EL", "KILO", "PESA"],
+      ["EL", "KOALA", "SUBE"],
+      ["EL", "KAYAK", "REMA"]
+    ],
+    "options": ["KILO", "PESA", "KOALA", "SUBE", "KAYAK", "REMA", "SOL", "FLOR", "TREN", "BALÓN"]
+  },
+  "L": {
+    "phrases": [
+      ["EL", "LEÓN", "RUGE"],
+      ["LA", "LUNA", "BRILLA"],
+      ["EL", "LÁPIZ", "ESCRIBE"]
+    ],
+    "options": ["LEÓN", "RUGE", "LUNA", "BRILLA", "LÁPIZ", "ESCRIBE", "CASA", "IGLESIA", "CONEJO", "PERRO"]
+  },
+  "M": {
+    "phrases": [
+      ["LA", "MESA", "GRANDE"],
+      ["LA", "MONTAÑA", "ALTA"],
+      ["EL", "MANO", "TOMA"]
+    ],
+    "options": ["MESA", "GRANDE", "MONTAÑA", "ALTA", "MANO", "TOMA", "SILLA", "CASA", "FLOR", "GATO"]
+  },
+  "N": {
+    "phrases": [
+      ["LA", "NUBE", "GRANDE"],
+      ["EL", "NIDO", "ES", "ALTO"],
+      ["LA", "NARANJA", "SABROSA"]
+    ],
+    "options": ["NUBE", "GRANDE", "NIDO", "ALTO", "NARANJA", "SABROSA", "CIELO", "FLOR", "RÍO", "RATÓN"]
+  },
+  "O": {
+    "phrases": [
+      ["EL", "OSO", "DUERME"],
+      ["LA", "OLLA", "GRANDE"],
+      ["EL", "ORO", "BRILLA"]
+    ],
+    "options": ["OSO", "DUERME", "OLLA", "GRANDE", "ORO", "BRILLA", "CASA", "LUNA", "ÁRBOL", "TIGRE"]
+  },
+  "P": {
+    "phrases": [
+      ["EL", "PERRO", "LADRA"],
+      ["EL", "PASTEL", "DULCE"],
+      ["LA", "PLUMA", "ESCRIBE"]
+    ],
+    "options": ["PERRO", "LADRA", "PASTEL", "DULCE", "PLUMA", "ESCRIBE", "IGLESIA", "GATO", "CASA", "CONEJO"]
+  },
+  "Q": {
+    "phrases": [
+      ["EL", "QUESO", "RICO"],
+      ["LA", "QUÍMICA", "INTERESANTE"],
+      ["EL", "QUINCE", "ES", "NÚMERO"]
+    ],
+    "options": ["QUESO", "RICO", "QUÍMICA", "INTERESANTE", "QUINCE", "NÚMERO", "CASA", "FLOR", "TREN", "SILLA"]
+  },
+  "R": {
+    "phrases": [
+      ["EL", "RATÓN", "CORRE"],
+      ["EL", "RÍO", "GRANDE"],
+      ["LA", "ROSA", "ROJA"]
+    ],
+    "options": ["RATÓN", "CORRE", "RÍO", "GRANDE", "ROSA", "ROJA", "FLOR", "IGLESIA", "CASA", "SOL"]
+  },
+  "S": {
+    "phrases": [
+      ["EL", "SOL", "BRILLA"],
+      ["LA", "SILLA", "GRANDE"],
+      ["EL", "SUEÑO", "BONITO"]
+    ],
+    "options": ["SOL", "BRILLA", "SILLA", "GRANDE", "SUEÑO", "BONITO", "CASA", "FLOR", "PERRO", "RÍO"]
+  },
+  "T": {
+    "phrases": [
+      ["EL", "TIGRE", "CORRE"],
+      ["EL", "TREN", "LARGO"],
+      ["EL", "TOMATE", "ROJO"]
+    ],
+    "options": ["TIGRE", "CORRE", "TREN", "LARGO", "TOMATE", "ROJO", "FLOR", "SOL", "CASA", "SILLA"]
+  },
+  "U": {
+    "phrases": [
+      ["LA", "UVAS", "DULCES"],
+      ["EL", "UNO", "NÚMERO"],
+      ["LA", "UNIÓN", "FUERTE"]
+    ],
+    "options": ["UVAS", "DULCES", "UNO", "NÚMERO", "UNIÓN", "FUERTE", "FLOR", "RÍO", "GATO", "CONEJO"]
+  },
+  "V": {
+    "phrases": [
+      ["LA", "VACA", "GRANDE"],
+      ["LA", "VELA", "ENCENDIDA"],
+      ["LA", "VENTANA", "ABIERTA"]
+    ],
+    "options": ["VACA", "GRANDE", "VELA", "ENCENDIDA", "VENTANA", "ABIERTA", "SILLA", "PERRO", "SOL", "IGLESIA"]
+  },
+  "W": {
+    "phrases": [
+      ["EL", "WAFLE", "DULCE"],
+      ["EL", "WIFI", "RÁPIDO"],
+      ["EL", "WHISKY", "FUERTE"]
+    ],
+    "options": ["WAFLE", "DULCE", "WIFI", "RÁPIDO", "WHISKY", "FUERTE", "SILLA", "TIGRE", "CASA", "FLOR"]
+  },
+  "X": {
+    "phrases": [
+      ["EL", "XILÓFONO", "SUENA"],
+      ["EL", "XILÓGRAFO", "TALLA"],
+      ["EL", "XENÓN", "BRILLA"]
+    ],
+    "options": ["XILÓFONO", "SUENA", "XILÓGRAFO", "TALLA", "XENÓN", "BRILLA", "FLOR", "CONEJO", "IGLESIA", "RÍO"]
+  },
+  "Y": {
+    "phrases": [
+      ["EL", "YATE", "NAVEGA"],
+      ["EL", "YERNO", "AYUDA"],
+      ["EL", "YOYO", "SUBE", "Y", "BAJA"]
+    ],
+    "options": ["YATE", "NAVEGA", "YERNO", "AYUDA", "YOYO", "SUBE", "BAJA", "SOL", "FLOR", "PERRO", "CASA"]
+  },
+  "Z": {
+    "phrases": [
+      ["EL", "ZAPATO", "ES", "GRANDE"],
+      ["EL", "ZORRO", "CORRE"],
+      ["LA", "ZANAHORIA", "NARANJA"]
+    ],
+    "options": ["ZAPATO", "GRANDE", "ZORRO", "CORRE", "ZANAHORIA", "NARANJA", "SILLA", "CASA", "RÍO", "IGLESIA"]
+  }
+}

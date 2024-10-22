@@ -29,7 +29,7 @@ const Index = () => {
           </HStack>
         </TouchableOpacity>
 
-        <TouchableOpacity style={{ width: '80%' }}>
+        <TouchableOpacity style={{ width: '80%' }} onPress={() => router.replace('/screens/WordsMenu')}>
           <HStack space={4} alignItems="center" bg="#374555" px={8} py={4} borderRadius={20} w={'100%'} justifyContent='center'>
             <Image
               source={catIcon}
