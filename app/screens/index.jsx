@@ -8,15 +8,26 @@ import abcIcon from '../../assets/images/icons/abc.png';
 import readIcon from '../../assets/images/icons/reading.png';
 import NavigationBar from '../../components/NavigationBar';
 import { useRouter } from 'expo-router';
+import { useAvanceDatabase } from '../../sqlite/useAvanceDatabase'
+import { useIsFocused } from '@react-navigation/native';
 
 const Index = () => {
 
   const router = useRouter();
+  const isFocused = useIsFocused();
+  const avanceDatabase = useAvanceDatabase();
+
+
+  const goAlphabeticalMenu = async () => {
+    router.replace('/screens/AlphabeticalMenu')
+    const result = await avanceDatabase.create({ modulo: 'AlphabeticalMenu', letra: 'A', fecha: '2021-10-01' });
+    console.log(result)
+  }
 
   return (
     <Center flex={1} bg="#071120" w={'100%'}>
       <VStack space={6} alignItems="center" w={'100%'} >
-        <TouchableOpacity style={{ width: '80%' }} onPress={() => router.replace('/screens/AlphabeticalMenu')}>
+        <TouchableOpacity style={{ width: '80%' }} onPress={goAlphabeticalMenu}>
           <HStack space={4} alignItems="center" justifyItems='center' justifyContent='center' bg="#4CA0FF" px={8} py={4} borderRadius={20} w={'100%'}>
             <Image
               source={dogIcon}

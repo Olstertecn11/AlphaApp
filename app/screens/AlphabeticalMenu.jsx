@@ -6,7 +6,8 @@ import NavigationBar from '../../components/NavigationBar';
 import { Colors } from '../../constants/Colors';
 import HeaderBar from '../../components/HeaderBar';
 import { useRouter } from 'expo-router';
-// import { createTable } from '../../services/database';
+import { useIsFocused } from '@react-navigation/native';
+import { useAvanceDatabase } from '../../sqlite/useAvanceDatabase';
 
 const MenuRow = ({ items }) => {
   return (
@@ -37,6 +38,20 @@ const MenuItem = ({ letter }) => {
 
 const AlphabeticalMenu = () => {
 
+  const isFocused = useIsFocused();
+  const avanceDatabase = useAvanceDatabase();
+
+  const getAll = async () => {
+    const response = await avanceDatabase.getAllAvance();
+    console.log('get all');
+    console.log(response);
+  }
+
+  React.useEffect(() => {
+    if (isFocused) {
+      getAll();
+    }
+  }, [isFocused]);
 
   const AlphabetGrid = [
     ['A', 'B', 'C'],
