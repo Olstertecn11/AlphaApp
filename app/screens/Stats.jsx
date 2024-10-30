@@ -5,16 +5,17 @@ import React, { useState, useEffect } from 'react';
 import { useIsFocused } from '@react-navigation/native';
 import { useRouter } from 'expo-router';
 import { TouchableOpacity } from 'react-native';
+import results from '../../assets/data/results.json'
 
 const Stats = () => {
-  const [statistics, setStatistics] = useState([]);
+  const [statistics, setStatistics] = useState(results);
   const isFocused = useIsFocused();
   const avanceDatabase = useAvanceDatabase();
   const router = useRouter();
 
   useEffect(() => {
     if (isFocused) {
-      getStatistics();
+      // getStatistics();
     }
   }, [isFocused]);
 
