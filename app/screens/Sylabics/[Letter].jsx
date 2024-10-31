@@ -8,10 +8,8 @@ import { Colors } from '../../../constants/Colors';
 import ButtonBox from '../../../components/ButtonBox';
 
 const SyllabicBox = () => {
-  console.log('SyllabicBox');
   const { Letter } = useLocalSearchParams();
   const [sylabics, setSylabics] = React.useState([]);
-  console.log(Letter);
 
   React.useEffect(() => {
     SyllabicData.combinations.forEach((item) => {

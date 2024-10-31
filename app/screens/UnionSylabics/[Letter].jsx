@@ -86,7 +86,8 @@ const UnionSylabic = () => {
 
 
   const addAnswer = (sylabic) => {
-    if (answers.includes(sylabic) || answers.length >= exercises[currentExercise].silabas.length) {
+    console.log(sylabic);
+    if (answers.length >= exercises[currentExercise].silabas.length) {
       return;
     }
     setAnswers((prev) => [...prev, sylabic]);
