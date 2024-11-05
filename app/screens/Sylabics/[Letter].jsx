@@ -10,13 +10,10 @@ import ButtonBox from '../../../components/ButtonBox';
 const SyllabicBox = () => {
   const { Letter } = useLocalSearchParams();
   const [sylabics, setSylabics] = React.useState([]);
+  // create array with all sylabics of alfabet
 
   React.useEffect(() => {
-    SyllabicData.combinations.forEach((item) => {
-      console.log(item.letter + " == " + Letter.toUpperCase());
-    });
     const letter = SyllabicData.combinations.filter((item) => item.letter === Letter.toUpperCase());
-    console.log(letter[0].syllabic_combination);
     setSylabics(letter[0].syllabic_combination);
   }, [Letter]);
 
