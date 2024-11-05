@@ -133,11 +133,10 @@ const ButtonBox = ({ item, index }) => {
     }
   };
 
-  // Limpiar el sonido al desmontar el componente
   useEffect(() => {
     return sound
       ? () => {
-        sound.unloadAsync();  // Destruir el objeto de sonido cuando el componente se desmonte
+        sound.unloadAsync();
       }
       : undefined;
   }, [sound]);
