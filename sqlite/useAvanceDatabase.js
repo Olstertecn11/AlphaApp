@@ -89,5 +89,13 @@ export function useAvanceDatabase() {
     }
   }
 
-  return { create, searchByModulo, update, remove, show, getAllAvance };
+  async function removeAll() {
+    try {
+      await database.execAsync("DELETE FROM avance");
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  return { create, searchByModulo, update, remove, show, getAllAvance, removeAll };
 }

@@ -20,7 +20,9 @@ const Index = () => {
 
   const goAlphabeticalMenu = async () => {
     router.replace('/screens/AlphabeticalMenu')
-    const result = await avanceDatabase.create({ modulo: 'AlphabeticalMenu', letra: 'A', fecha: '2021-10-01' });
+    const today = new Date().toISOString().split('T')[0];
+    const result = await avanceDatabase.create({ modulo: 'AlphabeticalMenu', letra: 'A', fecha: today });
+    console.log('result');
     console.log(result)
   }
 
