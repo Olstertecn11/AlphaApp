@@ -35,7 +35,7 @@ const Stats = () => {
 
   const clearData = async () => {
     const response = await avanceDatabase.removeAll();
-    console.log(response);
+    getStatistics();
   }
 
   return (

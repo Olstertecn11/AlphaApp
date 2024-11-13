@@ -6,6 +6,7 @@ import React from 'react';
 import NavigationBar from '../../../components/NavigationBar';
 import HeaderBar from '../../../components/HeaderBar';
 import { Confetti } from 'react-native-fast-confetti';
+import { useAvanceDatabase } from '../../../sqlite/useAvanceDatabase';
 
 const InputBox = ({ results, colorScheme }) => {
   return (
@@ -29,6 +30,8 @@ const LetterPractice = () => {
   const letters = [...alphabet.sort(() => Math.random() - 0.5).slice(0, 5), Letter];
   const [answers, setAnswers] = React.useState([]);
   const [isCorrect, setIsCorrect] = React.useState(false);
+  const avanceDatabase = useAvanceDatabase();
+  const router = useRouter();
 
   const addAnswer = (letter) => {
     setAnswers([letter]);
@@ -39,6 +42,16 @@ const LetterPractice = () => {
       setIsCorrect(true);
     }
   }, [answers]);
+
+  const nextLesson = () => {
+    const response = avanceDatabase.create({ modulo: 'Modulo Alfabetico', letra: Letter, fecha: new Date().toISOString().split('T')[0] });
+    console.log(response);
+    setIsCorrect(true);
+    setTimeout(() => {
+      router.replace('/screens/AlphabeticalMenu');
+    }, 2000);
+    // Reproducir bien hecho felicidades por finalizar la lección
+  }
 
 
   return (
@@ -71,7 +84,14 @@ const LetterPractice = () => {
           ))}
         </HStack>
       </Center>
-      <NavigationBar prev={`/screens`} reload={true} />
+      {
+        isCorrect &&
+        <NavigationBar prev={`/screens`} reload={true} next={nextLesson} nextIsLink={false} />
+      }
+      {
+        !isCorrect &&
+        <NavigationBar prev={`/screens`} reload={true} />
+      }
     </View >
   )
 };

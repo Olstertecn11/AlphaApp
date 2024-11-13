@@ -11,8 +11,7 @@ export function useAvanceDatabase() {
     try {
       const result = await statement.executeAsync({
         $modulo: data.modulo,
-        $letra: data.letra,
-        $fecha: data.fecha,
+        $letra: data.letra, $fecha: data.fecha,
       });
 
       const insertedRowId = result.lastInsertRowId;
@@ -92,6 +91,7 @@ export function useAvanceDatabase() {
   async function removeAll() {
     try {
       await database.execAsync("DELETE FROM avance");
+      await database.execAsync("DELETE FROM sqlite_sequence WHERE name='avance'");
     } catch (error) {
       throw error;
     }

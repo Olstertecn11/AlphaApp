@@ -42,14 +42,14 @@ const AlphabeticalMenu = () => {
   const avanceDatabase = useAvanceDatabase();
 
   const getAll = async () => {
-    const response = await avanceDatabase.getAllAvance();
-    console.log('get all');
-    console.log(response);
+    // const response = await avanceDatabase.getAllAvance();
+    // console.log('get all');
+    // console.log(response);
   }
 
   React.useEffect(() => {
     if (isFocused) {
-      getAll();
+      // getAll();
     }
   }, [isFocused]);
 
