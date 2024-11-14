@@ -3,15 +3,44 @@ import { Image, Center, IconButton, VStack, Icon, Button } from 'native-base';
 import playIcon from '../assets/images/icons/play.png';
 import handIcon from '../assets/images/icons/hand.png';
 import { useRouter } from 'expo-router';
+import { Audio } from 'expo-av';  // Importamos el módulo Audio de expo-av
+import { useIsFocused } from '@react-navigation/native';
 
 const InitialScreen = () => {
 
   const router = useRouter();
+  const isFocused = useIsFocused();
+
+  const [sound, setSound] = React.useState();
+  const [isPlaying, setIsPlaying] = React.useState(false);
+  const audio_path = require('../assets/audio/letters/instructions/bienvenido.m4a');
+
+  const playAudio = async () => {
+    if (!audio_path) return;
+    try {
+      const { sound } = await Audio.Sound.createAsync(audio_path);
+      setSound(sound);
+      await sound.playAsync();
+      setIsPlaying(true);
+    } catch (error) {
+      console.error("Error al reproducir el sonido:", error);
+    }
+  };
 
 
   React.useEffect(() => {
+    return sound
+      ? () => {
+        sound.unloadAsync();
+      }
+      : undefined;
+  }, [sound]);
 
-  }, []);
+  React.useEffect(() => {
+    if (isFocused) {
+      playAudio();
+    }
+  }, [isFocused]);
 
 
   return (

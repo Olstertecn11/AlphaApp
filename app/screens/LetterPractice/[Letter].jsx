@@ -9,9 +9,9 @@ import { Confetti } from 'react-native-fast-confetti';
 import { useAvanceDatabase } from '../../../sqlite/useAvanceDatabase';
 import { Audio } from 'expo-av';  // Importamos el módulo Audio de expo-av
 
-const InputBox = ({ results, colorScheme }) => {
+const InputBox = ({ results, colorScheme, isWrong }) => {
   return (
-    <Box bg={colorScheme ? 'green.400' : Colors.buttonActive} w={'100%'} h='60px' borderRadius={8}>
+    <Box bg={colorScheme ? 'green.400' : isWrong ? 'red.600' : Colors.buttonActive} w={'100%'} h='60px' borderRadius={8}>
       <HStack space={1}>
         {results && results.map((letter, index) => (
           <Box key={index} bg={colorScheme ? 'green.800' : Colors.buttonActive} w={'80px'} h='60px' borderRadius={8} >
@@ -63,6 +63,7 @@ const LetterPractice = () => {
   const letters = [...alphabet.sort(() => Math.random() - 0.5).slice(0, 5), Letter];
   const [answers, setAnswers] = React.useState([]);
   const [isCorrect, setIsCorrect] = React.useState(false);
+  const [isWrong, setIsWrong] = React.useState(false);
   const avanceDatabase = useAvanceDatabase();
   const router = useRouter();
 
@@ -70,14 +71,22 @@ const LetterPractice = () => {
   const [sound, setSound] = React.useState();
   const [isPlaying, setIsPlaying] = React.useState(false);
 
-  const playAudio = async (item) => {
+  const playAudio = async (item, direct = false) => {
     if (!audios) return;
     try {
-      const item_lower = item.toLowerCase();
-      const { sound } = await Audio.Sound.createAsync(audios[item_lower]);
-      setSound(sound);
-      await sound.playAsync();
-      setIsPlaying(true);
+      if (!direct) {
+        const item_lower = item.toLowerCase();
+        const { sound } = await Audio.Sound.createAsync(audios[item_lower]);
+        setSound(sound);
+        await sound.playAsync();
+        setIsPlaying(true);
+      }
+      else {
+        const { sound } = await Audio.Sound.createAsync(item);
+        setSound(sound);
+        await sound.playAsync();
+        setIsPlaying(true);
+      }
     } catch (error) {
       console.error("Error al reproducir el sonido:", error);
     }
@@ -99,7 +108,16 @@ const LetterPractice = () => {
 
   React.useEffect(() => {
     if (answers[0] === Letter) {
+      playAudio(require("../../../assets/audio/letters/instructions/felicidades.m4a"), true);
       setIsCorrect(true);
+      setIsWrong(false);
+    }
+    else {
+      if (answers.length > 0) {
+        playAudio(require("../../../assets/audio/letters/instructions/incorrecta.m4a"), true);
+        setIsWrong(true);
+        setIsCorrect(false);
+      }
     }
   }, [answers]);
 
@@ -110,7 +128,6 @@ const LetterPractice = () => {
     setTimeout(() => {
       router.replace('/screens/AlphabeticalMenu');
     }, 2000);
-    // Reproducir bien hecho felicidades por finalizar la lección
   }
 
 
@@ -122,7 +139,7 @@ const LetterPractice = () => {
         <Text color={Colors.buttonActive} fontSize={'140px'} fontWeight='bold' >{Letter}</Text>
       </Center>
       <Center px={8}>
-        <InputBox results={answers} colorScheme={isCorrect} />
+        <InputBox results={answers} colorScheme={isCorrect} isWrong={isWrong} />
       </Center>
       <Center>
         <HStack space={2} mt={8}>

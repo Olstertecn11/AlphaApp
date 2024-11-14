@@ -158,16 +158,25 @@ const UnionSylabic = () => {
 
 
   const [sound, setSound] = useState();
+  const [isWrong, setIsWrong] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const playAudio = async (item) => {
+  const playAudio = async (item, direct = false) => {
     if (!audios) return;
     try {
-      const item_lower = item.toLowerCase();
-      const { sound } = await Audio.Sound.createAsync(audios[item_lower]);
-      setSound(sound);
-      await sound.playAsync();
-      setIsPlaying(true);
+      if (!direct) {
+        const item_lower = item.toLowerCase();
+        const { sound } = await Audio.Sound.createAsync(audios[item_lower]);
+        setSound(sound);
+        await sound.playAsync();
+        setIsPlaying(true);
+      }
+      else {
+        const { sound } = await Audio.Sound.createAsync(item);
+        setSound(sound);
+        await sound.playAsync();
+        setIsPlaying(true);
+      }
     } catch (error) {
       console.error("Error al reproducir el sonido:", error);
     }
@@ -203,7 +212,14 @@ const UnionSylabic = () => {
     if (answers.length === exercises[currentExercise].silabas.length) {
       const isCorrect = answers.every((answer, index) => answer === exercises[currentExercise].silabas[index]);
       if (isCorrect) {
+        playAudio(require('../../../assets/audio/letters/instructions/correcta.m4a'), true);
         setIsCorrect(true);
+        setIsWrong(false);
+      }
+      else {
+        playAudio(require('../../../assets/audio/letters/instructions/incorrecta.m4a'), true);
+        setIsWrong(true);
+        setIsCorrect(false);
       }
     }
   }, [answers]);
@@ -236,7 +252,7 @@ const UnionSylabic = () => {
       </Center>
 
       <Center px={5} mt={5}>
-        <Box bg={isCorrect ? 'green.600' : Colors.buttonInactive} h={60} w="100%" borderRadius={8} mb={5}>
+        <Box bg={isCorrect ? 'green.600' : isWrong ? 'red.600' : Colors.buttonInactive} h={60} w="100%" borderRadius={8} mb={5}>
           <HStack space={2} alignItems="center" justifyContent="center">
             {answers.map((answer, index) => (
               <AnswerBox key={index} text={answer} />
