@@ -23,7 +23,7 @@ const WordPractice = () => {
   const nextRoute = vocals.includes(Letter) ? '' : `/screens/Sylabics/${Letter}`;
 
   const listenWord = () => {
-    alert('word with voice')
+    // alert('word with voice')
   }
 
 
@@ -45,7 +45,7 @@ const WordPractice = () => {
           <AntDesign name="star" size={64} color="yellow" style={{ marginTop: 80 }} />
         </TouchableOpacity>
       </Center>
-      <NavigationBar prev={'/screens/AlphabeticalMenu'} next={passToNext} nextIsLink={false} />
+      <NavigationBar prev={'/screens/WordsMenu'} next={passToNext} nextIsLink={false} />
     </View>
   )
 }
