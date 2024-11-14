@@ -9,28 +9,31 @@ import { useRouter } from 'expo-router';
 import { useIsFocused } from '@react-navigation/native';
 import { useAvanceDatabase } from '../../sqlite/useAvanceDatabase';
 
-const MenuRow = ({ items }) => {
+const MenuRow = ({ items, finished }) => {
   return (
     <HStack space={6}>
       {items.map((item, index) => (
-        <MenuItem key={index} letter={item} />
+        <MenuItem key={index} letter={item} finished={finished} />
       ))}
     </HStack>
   );
 };
 
-const MenuItem = ({ letter }) => {
+const MenuItem = ({ letter, finished }) => {
 
   const vocals = ['A', 'E', 'I', 'O', 'U'];
   if (!letter) return <Box size={16} />;
 
   const router = useRouter();
   const isVocal = vocals.includes(letter);
+  const isFinished = finished.includes(letter);
+  console.log(isFinished);
+
 
   return (
-    <TouchableOpacity onPress={() => router.push(`/screens/Letters/${letter}`)}>
-      <Box bg={isVocal ? Colors.buttonImportant : Colors.buttonInactive} size={16} borderRadius={14} justifyContent="center" alignItems="center">
-        <Text color="white">{letter}</Text>
+    <TouchableOpacity onPress={() => router.push(`/screens/Letters/${letter}`)} disabled={isFinished}>
+      <Box bg={isVocal ? Colors.buttonImportant : isFinished ? 'red.100' : Colors.buttonInactive} size={16} borderRadius={14} justifyContent="center" alignItems="center">
+        <Text color={isFinished ? 'red.600' : 'white'} >{letter}</Text>
       </Box>
     </TouchableOpacity>
   );
@@ -40,16 +43,17 @@ const AlphabeticalMenu = () => {
 
   const isFocused = useIsFocused();
   const avanceDatabase = useAvanceDatabase();
+  const [letters, setLetters] = React.useState([]);
 
   const getAll = async () => {
-    // const response = await avanceDatabase.getAllAvance();
-    // console.log('get all');
-    // console.log(response);
+    const response = await avanceDatabase.getAllAvance();
+    const my_letters = response.map((element) => element.letra);
+    setLetters(my_letters);
   }
 
   React.useEffect(() => {
     if (isFocused) {
-      // getAll();
+      getAll();
     }
   }, [isFocused]);
 
@@ -80,7 +84,7 @@ const AlphabeticalMenu = () => {
       <ScrollView mt={'40%'} w={'100%'}>
         <VStack space={6} alignItems="center">
           {AlphabetGrid.map((items, index) => (
-            <MenuRow key={index} items={items} />
+            <MenuRow key={index} items={items} finished={letters} />
           ))}
         </VStack>
       </ScrollView>
